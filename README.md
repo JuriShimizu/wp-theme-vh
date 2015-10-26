@@ -9,7 +9,7 @@
 ### Login to docker hub.
 [Docker Hub](https://hub.docker.com/)
 
-### Fetch lates sources.
+### Fetch latest sources.
 
 ```sh
 git pull *this repository url*

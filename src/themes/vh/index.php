@@ -1,61 +1,78 @@
+<?php get_header(); ?>
+
+<section class="hero">
+    <div class="lay">
+        <header class="site-header">
+            <div class="container-fluid">
+
+                <nav>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h1 class="font-logo">
+                                <a href="/" rel="home"><?php bloginfo( 'name' ); ?></a>
+                            </h1>
+                            <?php $description = get_bloginfo( 'description', 'display' ); if ( $description || is_customize_preview() ) : ?>
+                            <p class="font-logo"><?php echo $description; ?></p>
+                            <?php endif; ?>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-right links font-lg">
+                                <a href="/about">当院について</a>
+                                <a href="/access">アクセス</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </header>
+
+        <?php if (is_single()): ?>
+        <div class="container-fluid font-logo header">
+            <?php the_title('<h2>', '</h2>'); ?>
+        </div>
+        <?php else: ?>
+        <div class="container text-center font-logo header">
+            <h2>大切な動物たちを<br>元気にしてあげたい</h2>
+        </div>
+        <?php endif; ?>
+    </div>
+</section>
+
+<div class="divider-lg"></div>
+
+<main class="site-body">
+<?php if (have_posts()): ?>
+
+<?php if (is_home() && ! is_front_page()): ?>
+<header class="post-header">
+    <h1><?php single_post_title(); ?></h1>
+</header>
+<?php endif; ?>
+
 <?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * e.g., it puts together the home page when no home.php file exists.
- *
- * Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
+for ($i = 0; have_posts(); $i++) {
+    the_post();
+    if (is_single()) {
+        get_template_part( 'content_single', get_post_format() );
+    } else {
+        get_template_part( 'content', get_post_format() );
+    }
+}
 
-get_header(); ?>
+the_posts_pagination([
+    'prev_text'          => __( 'Previous page', 'vh' ),
+    'next_text'          => __( 'Next page', 'vh' ),
+    'before_page_number' => __( 'Page', 'vh' ),
+]);
+?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
-
-			<?php
-			// Start the loop.
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'content', get_post_format() );
-
-			// End the loop.
-			endwhile;
-
-			// Previous/next page navigation.
-			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'twentyfifteen' ),
-				'next_text'          => __( 'Next page', 'twentyfifteen' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>',
-			) );
-
-		// If no content, include the "No posts found" template.
-		else :
-			get_template_part( 'content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+<?php
+else:
+get_template_part( 'content', 'none' );
+endif;
+?>
+</main>
 
 <?php get_footer(); ?>
