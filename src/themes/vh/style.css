@@ -153,18 +153,18 @@ header.site-header nav .links {
 main.site-body {
   min-height: 700px; }
 
-body .hero h2 {
-  font-family: mplus-1p-regular;
-  letter-spacing: 5px; }
-
-body.home .hero {
+body .hero {
   background-size: cover;
   background-image: url(./images/bg.jpg);
   background-position: 50% 60%; }
-  body.home .hero .typography {
-    padding: 120px 0; }
-  body.home .hero h2 {
-    color: #fff; }
+  body .hero h2 {
+    color: #fff;
+    font-family: mplus-1p-regular;
+    letter-spacing: 5px;
+    text-shadow: 0 1px 1px #000;
+    font-weight: 900; }
+  body .hero .typography {
+    padding: 30px 0 210px 0; }
 
 section header h2 {
   position: relative;
