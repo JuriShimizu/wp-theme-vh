@@ -7,8 +7,7 @@
 
         <title><?php bloginfo( 'name' ); ?> <?php echo get_bloginfo( 'description', 'display' ); ?></title>
 
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="//mplus-fonts.sourceforge.jp/webfonts/mplus_webfonts.css" />
+        <link rel="stylesheet" href="/wp-content/themes/vh/vendor/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
         <?php wp_head(); ?>
         <link rel="stylesheet" href="/wp-content/themes/vh/style.css">
     </head>
