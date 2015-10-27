@@ -26,9 +26,19 @@ header.site-header {
 
   nav {
     .links {
-      padding-top: 20px;
+      padding-top: 10px;
+
+      @media (max-width:767px) {
+        border-top: 1px solid $color-base;
+      }
 
       .link {
+        padding: 10px 0;
+
+        @media (max-width:767px) {
+          background-color: rgba($color-base, .5);
+          border-radius: $radius;
+        }
 
         .icon {
           min-height: 30px;
