@@ -100,7 +100,8 @@ section {
     padding: 20px;
     padding-top: 10px;
     background-color: rgba($color-base, .5);
-    box-shadow: 0 2px 0 $color-base;
+    border: 1px solid $color-base;
+    box-shadow: 0 1px 0 $color-base;
     border-radius: $radius;
 
     h3 {
