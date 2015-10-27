@@ -197,7 +197,7 @@ section .information {
   box-shadow: 0 2px 0 #eee;
   border-radius: 3px; }
   section .information h3 {
-    font-size: 1rem;
+    font-size: 14px;
     max-width: 100px; }
 
 section .post h3 {
