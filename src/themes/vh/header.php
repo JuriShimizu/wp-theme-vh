@@ -12,3 +12,28 @@
 
     <body <?php body_class(); ?>>
 
+        <header class="site-header">
+            <div class="container-fluid">
+
+                <nav>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h1 class="font-logo">
+                                <a href="/" rel="home"><?php bloginfo( 'name' ); ?></a>
+                            </h1>
+                            <?php $description = get_bloginfo( 'description', 'display' ); if ( $description || is_customize_preview() ) : ?>
+                            <p class="font-logo"><?php echo $description; ?></p>
+                            <?php endif; ?>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-right links font-lg">
+                                <a href="/about">当院について</a>
+                                <a href="/access">アクセス</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </header>

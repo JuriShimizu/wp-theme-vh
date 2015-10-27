@@ -1,3 +1,13 @@
+<section class="hero">
+    <div class="lay">
+        <div class="container-fluid font-logo">
+            <?php the_title('<h2>', '</h2>'); ?>
+        </div>
+    </div>
+</section>
+
+<div class="divider-lg"></div>
+
 <section>
     <div class="container single">
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

@@ -1,33 +1,23 @@
+<section class="hero">
+    <div class="lay">
+        <div class="container font-logo">
+            <h2>大切な動物たちを<br>元気にしてあげたい</h2>
+        </div>
+    </div>
+</section>
+
+<div class="divider-lg"></div>
+
 <section>
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-
-                <article id="post-<?php the_ID(); ?>">
-                    <header class="article-header">
-                        <?php the_title(sprintf('<h2><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>'); ?>
-                    </header>
-
+                <?php $page = get_post(get_page_by_path('information')); ?>
+                <article>
+                    <h3 class="title"><?php echo $page->post_title; ?></h3>
                     <div class="divider"></div>
-
-<?php
-the_content(sprintf(the_title('', '', false )));
-
-wp_link_pages([
-    'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfifteen' ) . '</span>',
-    'after'       => '</div>',
-    'link_before' => '<span>',
-    'link_after'  => '</span>',
-    'pagelink'    => '<span>' . __( 'Page', 'twentyfifteen' ) . ' </span>%',
-    'separator'   => '<span>, </span>',
-]);
-?>
-
-<footer class="article-footer">
-    <?php edit_post_link( __( 'Edit', 'twentyfifteen' ), '<span class="edit-link">', '</span>' ); ?>
-</footer>
+                    <div class="pre"><?php echo $page->post_content; ?></div>
                 </article>
-
             </div>
         </div>
     </div>
