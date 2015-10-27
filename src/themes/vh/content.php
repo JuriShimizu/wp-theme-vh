@@ -16,7 +16,7 @@
                 <?php $page = get_post(get_page_by_path('information')); ?>
                 <section class="information">
                     <h3><?php echo $page->post_title; ?></h3>
-                    <div class="divider-lg"></div>
+                    <div class="divider"></div>
                     <div class="pre"><?php echo $page->post_content; ?></div>
                 </section>
                 <div class="visible-xs divider-lg"></div>
