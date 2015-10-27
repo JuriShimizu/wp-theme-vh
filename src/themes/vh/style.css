@@ -259,4 +259,6 @@ footer {
 
 @media (max-width: 767px) {
   html {
-    font-size: 12px; } }
+    font-size: 12px; }
+  small {
+    display: block; } }
