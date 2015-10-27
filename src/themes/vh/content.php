@@ -26,6 +26,7 @@
 
                 <section class="post">
                     <h3>院長ブログ</h3>
+                    <div class="divider"></div>
 
                     <?php for ($i = 0; (have_posts() && $i < 3); $i++) : the_post(); ?>
                     <article>
@@ -42,6 +43,8 @@
                 <section class="map">
                     <?php $page = get_post(get_page_by_path('access')); ?>
                     <h3><?php echo $page->post_title; ?></h3>
+                    <div class="divider"></div>
+
                     <?php echo $page->post_content; ?>
                 </section>
 

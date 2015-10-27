@@ -53,3 +53,17 @@ a.block {
     border-bottom: 5px solid transparent;
   }
 }
+
+@mixin color-line($width, $color) {
+      position: relative;
+      border-bottom: $width solid $color-base;
+
+      &:before {
+        position: absolute;
+        bottom: -$width;
+        width: 30%;
+        content: '';
+        display: block;
+        border-bottom: $width solid $color;
+      }
+}

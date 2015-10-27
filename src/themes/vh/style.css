@@ -167,10 +167,10 @@ body .hero {
 
 section header h2 {
   position: relative;
+  border-bottom: 2px solid #eee;
   margin: 0;
   padding: 20px 0;
-  color: #000;
-  border-bottom: 2px solid #eee; }
+  color: #000; }
   section header h2:before {
     position: absolute;
     bottom: -2px;
@@ -189,27 +189,45 @@ section .information {
     font-size: 1rem;
     max-width: 200px; }
 
-section .post {
-  border-bottom: 1px solid #eee; }
-  section .post h3 {
-    font-size: 1.2rem;
-    margin: 0;
-    padding: 10px 0;
-    color: #000; }
-  section .post article {
-    height: 4rem;
-    overflow: hidden; }
-    section .post article h4 {
-      font-weight: 900;
-      color: #000;
-      font-size: 1rem;
-      margin: 0; }
-
-section .map h3 {
+section .post h3 {
+  position: relative;
+  border-bottom: 1px solid #eee;
   font-size: 1.2rem;
   margin: 0;
-  padding: 10px 0;
+  padding: 10px 0 5px 0;
   color: #000; }
+  section .post h3:before {
+    position: absolute;
+    bottom: -1px;
+    width: 30%;
+    content: '';
+    display: block;
+    border-bottom: 1px solid #2980b9; }
+
+section .post article {
+  border-bottom: 1px solid #eee;
+  height: 4rem;
+  overflow: hidden; }
+  section .post article h4 {
+    font-weight: 900;
+    color: #000;
+    font-size: 1rem;
+    margin: 0; }
+
+section .map h3 {
+  position: relative;
+  border-bottom: 1px solid #eee;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 10px 0 5px 0;
+  color: #000; }
+  section .map h3:before {
+    position: absolute;
+    bottom: -1px;
+    width: 30%;
+    content: '';
+    display: block;
+    border-bottom: 1px solid #2980b9; }
 
 section .map iframe {
   max-height: 300px; }
