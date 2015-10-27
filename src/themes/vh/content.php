@@ -17,7 +17,9 @@
                 <section class="information">
                     <h3><?php echo $page->post_title; ?></h3>
                     <div class="divider"></div>
-                    <div class="pre"><?php echo $page->post_content; ?></div>
+                    <div class="body">
+                        <?php echo $page->post_content; ?>
+                    </div>
                 </section>
                 <div class="visible-xs divider-lg"></div>
             </div>

@@ -24,40 +24,38 @@ header.site-header {
     color: #000;
   }
 
-  nav {
-    .links {
-      padding-top: 10px;
+  .links {
+    padding-top: 10px;
+
+    @media (max-width:767px) {
+      border-top: 1px solid $color-base;
+    }
+
+    .link {
+      padding: 10px 0;
 
       @media (max-width:767px) {
-        border-top: 1px solid $color-base;
+        background-color: rgba($color-base, .5);
+        border-radius: $radius;
       }
 
-      .link {
-        padding: 10px 0;
+      .icon {
+        min-height: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
 
-        @media (max-width:767px) {
-          background-color: rgba($color-base, .5);
-          border-radius: $radius;
-        }
+      &.about .icon { background-image: url(./images/icon/bird_128px.png); }
+      &.introduction .icon { background-image: url(./images/icon/sheep_128px.png); }
+      &.examination .icon { background-image: url(./images/icon/cat_128px.png); }
+      &.pricing .icon { background-image: url(./images/icon/chicken_128px.png); }
+      &.trimming .icon { background-image: url(./images/icon/dog_128px.png); }
+      &.hotel .icon { background-image: url(./images/icon/parrot_128px.png); }
 
-        .icon {
-          min-height: 30px;
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: contain;
-        }
-
-        &.about .icon { background-image: url(./images/icon/bird_128px.png); }
-        &.introduction .icon { background-image: url(./images/icon/sheep_128px.png); }
-        &.examination .icon { background-image: url(./images/icon/cat_128px.png); }
-        &.pricing .icon { background-image: url(./images/icon/chicken_128px.png); }
-        &.trimming .icon { background-image: url(./images/icon/dog_128px.png); }
-        &.hotel .icon { background-image: url(./images/icon/parrot_128px.png); }
-
-        h3 {
-          font-size: 1rem;
-          margin: 0;
-        }
+      h3 {
+        font-size: 1rem;
+        margin: 0;
       }
     }
   }
@@ -67,95 +65,97 @@ main.site-body {
   min-height: 700px;
 }
 
-body {
-  .hero {
+.hero {
+  h2 {
+    color: #fff;
+    font-family: $font-stack-accent;
+    letter-spacing: 5px;
+    text-shadow: 0 1px 1px #000;
+  }
+
+  background-size: cover;
+  background-image: url(./images/bg.jpg);
+  background-position: 50% 60%;
+
+  .typography {
+    padding: 30px 0 210px 0;
+  }
+}
+
+.home {
+  .post {
+    h3 {
+      @include color-line(1px, $color-main);
+      font-size: $font-lg;
+      margin: 0;
+      padding: 10px 0 5px 0;
+      color: #000;
+    }
+
+    article{
+      border-bottom: 1px solid $color-base;
+      height: 4rem;
+      overflow: hidden;
+
+      h4 {
+        font-weight: 900;
+        color: #000;
+        font-size: 1rem;
+        margin: 0;
+      }
+    }
+  }
+
+  .map {
+    h3 {
+      @include color-line(1px, $color-main);
+      font-size: $font-lg;
+      margin: 0;
+      padding: 10px 0 5px 0;
+      color: #000;
+    }
+
+    iframe{
+      max-height: 300px;
+    }
+  }
+
+  .information {
+    padding: 20px;
+    padding-top: 10px;
+    background-color: rgba($color-base, .5);
+    border: 1px solid $color-base;
+    box-shadow: 0 1px 0 $color-base;
+    border-radius: $radius;
+
+    h3 {
+      @extend .ribbon;
+      font-size: 14px;
+      max-width: 100px;
+    }
+  }
+}
+
+.single,
+.page {
+  header {
     h2 {
-      color: #fff;
+      @include color-line(2px, $color-main);
       font-family: $font-stack-accent;
-      letter-spacing: 5px;
-      text-shadow: 0 1px 1px #000;
-    }
+      margin: 0;
+      padding: 20px 0;
+      color: #000;
 
-    background-size: cover;
-    background-image: url(./images/bg.jpg);
-    background-position: 50% 60%;
-
-    .typography {
-      padding: 30px 0 210px 0;
-    }
-  }
-
-  &.home {
-    .post {
-      h3 {
-        @include color-line(1px, $color-main);
-        font-size: $font-lg;
-        margin: 0;
-        padding: 10px 0 5px 0;
-        color: #000;
-      }
-
-      article{
-        border-bottom: 1px solid $color-base;
-        height: 4rem;
-        overflow: hidden;
-
-        h4 {
-          font-weight: 900;
-          color: #000;
-          font-size: 1rem;
-          margin: 0;
-        }
-      }
-    }
-
-    .map {
-      h3 {
-        @include color-line(1px, $color-main);
-        font-size: $font-lg;
-        margin: 0;
-        padding: 10px 0 5px 0;
-        color: #000;
-      }
-
-      iframe{
-        max-height: 300px;
-      }
-    }
-
-    .information {
-      padding: 20px;
-      padding-top: 10px;
-      background-color: rgba($color-base, .5);
-      border: 1px solid $color-base;
-      box-shadow: 0 1px 0 $color-base;
-      border-radius: $radius;
-
-      h3 {
-        @extend .ribbon;
-        font-size: 14px;
-        max-width: 100px;
+      small {
+        display: block;
       }
     }
   }
 
-  &.single,
-  &.page {
-    section {
-      header {
-        h2 {
-          @include color-line(2px, $color-main);
-          font-family: $font-stack-accent;
-          margin: 0;
-          padding: 20px 0;
-          color: #000;
-
-          small {
-            display: block;
-          }
-        }
-      }
-    }
+  .body {
+    font-size: $font-lg;
+    line-height: 2em;
+    color: #000;
   }
 }
 

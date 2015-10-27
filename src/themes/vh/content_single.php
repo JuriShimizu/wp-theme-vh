@@ -15,7 +15,9 @@
 
             <div class="divider-lg"></div>
 
-            <?php the_content(); ?>
+            <div class="body">
+                <?php the_content(); ?>
+            </div>
         </article>
     </div>
 </section>
