@@ -19,7 +19,9 @@ body {
   font-size: inherit;
   font-family: "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   -webkit-font-smoothing: antialiased;
-  color: #333; }
+  color: #4d4d4d;
+  border-top: 5px solid #2980b9;
+  border-bottom: 10px solid #2980b9; }
 
 a {
   color: #2980b9; }
@@ -28,7 +30,7 @@ a:hover,
 a:focus,
 a:active {
   text-decoration: none;
-  color: #20638f; }
+  color: #e67e22; }
 
 h1 {
   font-size: 2.1rem; }
@@ -73,45 +75,98 @@ a.block {
   .row-condensed > div {
     padding: 0 5px; }
 
-header.site-header {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
-  header.site-header h1, header.site-header a, header.site-header p {
-    color: #fff; }
-  header.site-header .links {
-    padding: 25px 0; }
-    header.site-header .links a {
-      padding: 5px 10px;
-      margin: 0 10px;
-      display: inline-block;
-      border-bottom: 1px solid #fff; }
+.ribbon, .information h3 {
+  display: inline-block;
+  width: 100%;
+  max-width: 200px;
+  position: relative;
+  margin: 0 -30px;
+  padding: 10px;
+  background-color: #409ad5;
+  color: #fff;
+  box-shadow: 0 2px 3px #bbbbbb; }
+  .ribbon:before, .information h3:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 10px;
+    height: 10px;
+    border: 5px solid #164666;
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid transparent; }
+
+header.site-header h1 {
+  font-family: mplus-1p-regular;
+  font-weight: 900; }
+
+header.site-header h1, header.site-header a, header.site-header p {
+  color: #000; }
+
+header.site-header nav .links {
+  padding-top: 20px; }
+  header.site-header nav .links .link .icon {
+    min-height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; }
+  header.site-header nav .links .link.about .icon {
+    background-image: url(./images/icon/bird_128px.png); }
+  header.site-header nav .links .link.introduction .icon {
+    background-image: url(./images/icon/sheep_128px.png); }
+  header.site-header nav .links .link.examination .icon {
+    background-image: url(./images/icon/cat_128px.png); }
+  header.site-header nav .links .link.pricing .icon {
+    background-image: url(./images/icon/chicken_128px.png); }
+  header.site-header nav .links .link.trimming .icon {
+    background-image: url(./images/icon/dog_128px.png); }
+  header.site-header nav .links .link.hotel .icon {
+    background-image: url(./images/icon/parrot_128px.png); }
+  header.site-header nav .links .link h3 {
+    font-size: 1rem;
+    font-weight: 900;
+    margin: 0; }
 
 main.site-body {
-  min-height: 500px; }
+  min-height: 700px; }
 
-section.hero {
-  background-image: url(./images/bg.jpg);
-  background-size: cover;
-  background-position: center; }
-  section.hero .lay {
-    background-color: rgba(0, 0, 0, 0.5); }
-    section.hero .lay h2 {
-      color: #fff; }
+.hero {
+  background-color: rgba(41, 128, 185, 0.2);
+  /*background-image: url(./images/bg.jpg);*/
+  /*background-size: cover;*/
+  /*background-position: center;*/ }
+  .hero h2 {
+    font-family: mplus-1p-regular;
+    color: #000; }
 
 body.home .typography {
-  padding: 80px 0; }
+  padding: 100px 0; }
 
 body.single .typography {
   padding: 30px 0; }
 
-article {
-  padding: 20px; }
-  article h3 {
+.information {
+  padding: 20px;
+  padding-top: 10px;
+  background-color: rgba(238, 238, 238, 0.5);
+  border-bottom: 3px solid #eee; }
+  .information h3 {
+    font-size: 1rem;
+    font-weight: 900; }
+
+.post h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: 900; }
+
+.post article {
+  padding: 10px 0; }
+  .post article h4 {
+    color: #000;
+    font-size: 1rem;
     margin: 0; }
-  article.sm {
-    padding: 40px 0; }
-    article.sm h3 {
-      font-size: 1.2rem;
-      color: #000; }
 
 footer {
   font-size: 0.8rem; }

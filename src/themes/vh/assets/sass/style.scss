@@ -16,48 +16,65 @@ Text Domain: VH
 @import '_helper';
 
 header.site-header {
-  border-bottom: 1px solid rgba(#fff, .3);
-
-  h1, a, p {
-    color: #fff;
+  h1 {
+    font-family: $font-stack-accent;
+    font-weight: 900;
   }
 
-  .links {
-    padding: 25px 0;
+  h1, a, p {
+    color: #000;
+  }
 
-    a {
-      padding: 5px 10px;
-      margin: 0 10px;
-      display: inline-block;
-      border-bottom: 1px solid #fff;
+  nav {
+    .links {
+      padding-top: 20px;
+
+      .link {
+
+        .icon {
+          min-height: 30px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
+
+        &.about .icon { background-image: url(./images/icon/bird_128px.png); }
+        &.introduction .icon { background-image: url(./images/icon/sheep_128px.png); }
+        &.examination .icon { background-image: url(./images/icon/cat_128px.png); }
+        &.pricing .icon { background-image: url(./images/icon/chicken_128px.png); }
+        &.trimming .icon { background-image: url(./images/icon/dog_128px.png); }
+        &.hotel .icon { background-image: url(./images/icon/parrot_128px.png); }
+
+        h3 {
+          font-size: 1rem;
+          font-weight: 900;
+          margin: 0;
+        }
+      }
     }
   }
 }
 
 main.site-body {
-  min-height: 500px;
+  min-height: 700px;
 }
 
-section {
-  &.hero {
-    background-image: url(./images/bg.jpg);
-    background-size: cover;
-    background-position: center;
+.hero {
+  background-color: rgba($color-main, .2);
+  /*background-image: url(./images/bg.jpg);*/
+  /*background-size: cover;*/
+  /*background-position: center;*/
 
-    .lay {
-      background-color: $lay-dark;
-
-      h2 {
-        color: #fff;
-      }
-    }
+  h2 {
+    font-family: $font-stack-accent;
+    color: #000;
   }
 }
 
 body {
   &.home {
     .typography {
-      padding: 80px 0;
+      padding: 100px 0;
     }
   }
 
@@ -68,22 +85,35 @@ body {
   }
 }
 
-article {
+.information {
   padding: 20px;
+  padding-top: 10px;
+  background-color: rgba($color-base, .5);
+  border-bottom: 3px solid $color-base;
 
   h3 {
+    font-size: 1rem;
+    font-weight: 900;
+
+    @extend .ribbon;
+  }
+}
+
+.post {
+  h3 {
     margin: 0;
+    font-size: $font-lg;
+    color: #000;
+    font-weight: 900;
   }
 
-  &.information {
-  }
+  article {
+    padding: 10px 0;
 
-  &.sm {
-    padding: 40px 0;
-
-    h3 {
-      font-size: $font-lg;
+    h4 {
       color: #000;
+      font-size: 1rem;
+      margin: 0;
     }
   }
 }

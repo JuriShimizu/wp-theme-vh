@@ -4,8 +4,11 @@ $font-stack-accent: mplus-1p-regular;
 $font-sm: .8rem;
 $font-lg: 1.2rem;
 
-$color-accent: #2980b9;
+$color-accent: #e67e22;
 $color-main: #2980b9;
 $color-base: #eee;
 
 $lay-dark: rgba(0, 0, 0, .5);
+
+$radius: 3px;
+$box-shadow: 0 2px 3px darken($color-base, 20%);
