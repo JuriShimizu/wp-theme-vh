@@ -1,0 +1,27 @@
+@import '_import';
+
+.divider-lg { padding: 10px; }
+.divider { padding: 5px; }
+.divider-sm { padding: 3px; }
+
+.pre {
+  white-space: pre-wrap;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+a.block {
+  display: block;
+}
+
+.row-condensed {
+  padding: 0 10px;
+
+  &>div {
+    padding: 0 5px;
+  }
+}

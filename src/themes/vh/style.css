@@ -11,18 +11,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: calm, gentle, cleanliness
 Text Domain: VH
  */
-.font-lg {
-  font-size: 1.2rem; }
-
 /* Reset */
 html {
   font-size: 14px; }
 
 body {
   font-size: inherit;
-  font-family: 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-family: "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   -webkit-font-smoothing: antialiased;
-  background-color: #eee; }
+  background-color: #eee;
+  color: #333; }
 
 a {
   color: #2980b9; }
@@ -31,7 +29,7 @@ a:hover,
 a:focus,
 a:active {
   text-decoration: none;
-  color: #3498db; }
+  color: #20638f; }
 
 h1 {
   font-size: 2.1rem; }
@@ -51,54 +49,6 @@ h5 {
 h6 {
   font-size: 1.1rem; }
 
-/* Original */
-header.site-header {
-  background-color: #fff; }
-
-header.site-header,
-header.site-header h1,
-header.site-header a {
-  color: #333; }
-
-header.site-header .links {
-  padding: 25px 0; }
-
-header.site-header .links a {
-  padding: 5px 10px;
-  margin: 0 10px;
-  display: inline-block;
-  border-bottom: 1px solid #333; }
-
-main.site-body {
-  min-height: 500px; }
-
-section.hero {
-  background-image: url(./images/bg.jpg);
-  background-size: cover;
-  background-position: center; }
-
-section.hero .lay {
-  background-color: rgba(0, 0, 0, 0.5); }
-
-section.hero .lay h2 {
-  color: #fff; }
-
-body.home section.hero .lay {
-  padding: 60px; }
-
-body.single section.hero .lay {
-  padding: 30px; }
-
-article {
-  padding: 20px; }
-
-article .title {
-  margin: 0; }
-
-footer {
-  padding: 50px 0; }
-
-/* Helper */
 .divider-lg {
   padding: 10px; }
 
@@ -108,9 +58,6 @@ footer {
 .divider-sm {
   padding: 3px; }
 
-.font-logo {
-  font-family: mplus-1p-regular; }
-
 .pre {
   white-space: pre-wrap; }
 
@@ -119,7 +66,60 @@ footer {
   white-space: nowrap;
   overflow: hidden; }
 
-/* Override */
+a.block {
+  display: block; }
+
+.row-condensed {
+  padding: 0 10px; }
+  .row-condensed > div {
+    padding: 0 5px; }
+
+header.site-header {
+  background-color: #fff; }
+  header.site-header h1, header.site-header a {
+    color: #333; }
+  header.site-header .links {
+    padding: 25px 0; }
+    header.site-header .links a {
+      padding: 5px 10px;
+      margin: 0 10px;
+      display: inline-block;
+      border-bottom: 1px solid #333; }
+
+main.site-body {
+  min-height: 500px; }
+
+section.hero {
+  background-image: url(./images/bg.jpg);
+  background-size: cover;
+  background-position: center; }
+  section.hero .lay {
+    background-color: rgba(0, 0, 0, 0.7); }
+    section.hero .lay h2 {
+      color: #fff; }
+
+body.home section.hero .lay {
+  padding: 60px; }
+
+body.single section.hero .lay {
+  padding: 30px; }
+
+article {
+  padding: 20px; }
+  article h3 {
+    margin: 0; }
+  article.information {
+    background-color: #fff; }
+  article.sm {
+    padding: 40px 0;
+    background-color: #fff; }
+    article.sm h3 {
+      font-size: 1.2rem;
+      color: #000; }
+
+footer {
+  padding: 50px 0; }
+
 @media (max-width: 767px) {
   html {
     font-size: 12px; }

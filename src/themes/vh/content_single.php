@@ -1,6 +1,6 @@
 <section class="hero">
     <div class="lay">
-        <div class="container-fluid font-logo">
+        <div class="container-fluid">
             <?php the_title('<h2>', '</h2>'); ?>
         </div>
     </div>

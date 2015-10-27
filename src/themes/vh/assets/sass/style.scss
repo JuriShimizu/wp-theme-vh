@@ -11,60 +11,27 @@ Tags: calm, gentle, cleanliness
 Text Domain: VH
  */
 
-.main-color {}
-.accent-color {}
-.font-lg { font-size: 1.2rem; }
+@import '_import';
+@import '_reset';
+@import '_helper';
 
-/* Reset */
-html {
-  font-size: 14px;
-}
-
-body {
-  font-size: inherit;
-  font-family: 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  background-color: #eee;
-}
-
-a {
-  color: #2980b9;
-}
-
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: #3498db;
-}
-
-h1 { font-size: 2.1rem; }
-h2 { font-size: 1.9rem; }
-h3 { font-size: 1.7rem; }
-h4 { font-size: 1.5rem; }
-h5 { font-size: 1.3rem; }
-h6 { font-size: 1.1rem; }
-
-/* Original */
 header.site-header {
   background-color: #fff;
-}
 
-header.site-header,
-header.site-header h1,
-header.site-header a {
-  color: #333;
-}
+  h1, a {
+    color: $color-base-darken;
+  }
 
-header.site-header .links {
-  padding: 25px 0;
-}
+  .links {
+    padding: 25px 0;
 
-header.site-header .links a {
-  padding: 5px 10px;
-  margin: 0 10px;
-  display: inline-block;
-  border-bottom: 1px solid #333;
+    a {
+      padding: 5px 10px;
+      margin: 0 10px;
+      display: inline-block;
+      border-bottom: 1px solid $color-base-darken;
+    }
+  }
 }
 
 main.site-body {
@@ -75,59 +42,52 @@ section.hero {
   background-image: url(./images/bg.jpg);
   background-size: cover;
   background-position: center;
+
+  .lay {
+    background-color: $lay-dark;
+
+    h2 {
+      color: #fff;
+    }
+  }
 }
 
-section.hero .lay {
-  background-color: rgba(0, 0, 0, .5);
+body.home {
+  section.hero .lay {
+    padding: 60px;
+  }
 }
 
-section.hero .lay h2 {
-  color: #fff;
-}
-
-body.home section.hero .lay {
-  padding: 60px;
-}
-
-body.single section.hero .lay {
-  padding: 30px;
+body.single {
+  section.hero .lay {
+    padding: 30px;
+  }
 }
 
 article {
   padding: 20px;
-}
 
-article .title {
-  margin: 0;
+  h3 {
+    margin: 0;
+  }
+
+  &.information {
+    background-color: #fff;
+  }
+
+  &.sm {
+    padding: 40px 0;
+    background-color: #fff;
+
+    h3 {
+      font-size: $font-lg;
+      color: #000;
+    }
+  }
 }
 
 footer {
   padding: 50px 0;
-}
-
-/* Helper */
-.divider-lg { padding: 10px; }
-.divider { padding: 5px; }
-.divider-sm { padding: 3px; }
-
-.font-logo {
-  font-family: mplus-1p-regular;
-}
-
-.pre {
-  white-space: pre-wrap;
-}
-
-.ellipsis {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-/* Override */
-
-
-@media (max-width: 991px) {
 }
 
 @media (max-width:767px) {

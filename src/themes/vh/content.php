@@ -1,6 +1,6 @@
 <section class="hero">
     <div class="lay">
-        <div class="container font-logo">
+        <div class="container">
             <h2>大切な動物たちを<br>元気にしてあげたい</h2>
         </div>
     </div>
@@ -10,15 +10,36 @@
 
 <section>
     <div class="container">
-        <div class="row">
+        <div class="row row-condensed">
+
             <div class="col-sm-6">
                 <?php $page = get_post(get_page_by_path('information')); ?>
-                <article>
-                    <h3 class="title"><?php echo $page->post_title; ?></h3>
+                <article class="information">
+                    <h3><?php echo $page->post_title; ?></h3>
                     <div class="divider"></div>
                     <div class="pre"><?php echo $page->post_content; ?></div>
                 </article>
+                <div class="divider"></div>
             </div>
+
+            <div class="col-sm-6">
+                <div class="row row-condensed">
+
+                    <?php foreach (['about', 'introduction', 'examination', 'pricing', 'trimming', 'hotel'] as $el): ?>
+                    <div class="col-xs-6">
+                        <?php $page = get_post(get_page_by_path($el)); ?>
+                        <a href="/<?php echo $page->post_name ?>" class="text-center block">
+                            <article class="sm <?php echo $el; ?>">
+                                <h3><?php echo $page->post_title; ?></h3>
+                            </article>
+                        </a>
+                        <div class="divider"></div>
+                    </div>
+                    <?php endforeach; ?>
+
+                </div>
+            </div>
+
         </div>
     </div>
 </section>

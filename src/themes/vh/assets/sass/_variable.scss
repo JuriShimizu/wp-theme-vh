@@ -1,0 +1,18 @@
+$font-stack: 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+$font-stack-accent: mplus-1p-regular;
+
+$font-sm: .8rem;
+$font-lg: 1.2rem;
+
+$color-accent: #2980b9;
+$color-main: #2980b9;
+$color-base: #eee;
+$color-base-darken: #333;
+
+$color-main-lighten2: lighten($color-main, 20%);
+$color-main-lighten1: lighten($color-main, 10%);
+$color-main: $color-main;
+$color-main-darken1: darken($color-main, 10%);
+$color-main-darken2: darken($color-main, 20%);
+
+$lay-dark: rgba(0, 0, 0, .7);
