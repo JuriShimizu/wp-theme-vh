@@ -84,68 +84,73 @@ body {
       padding: 30px 0 210px 0;
     }
   }
-}
 
-section {
-  header {
-    h2 {
-      @include color-line(2px, $color-main);
-      margin: 0;
-      padding: 20px 0;
-      color: #000;
-    }
-  }
-
-  .information {
-    padding: 20px;
-    padding-top: 10px;
-    background-color: rgba($color-base, .5);
-    border: 1px solid $color-base;
-    box-shadow: 0 1px 0 $color-base;
-    border-radius: $radius;
-
-    h3 {
-      @extend .ribbon;
-      font-size: 14px;
-      max-width: 100px;
-    }
-  }
-
-  .post {
-
-    h3 {
-      @include color-line(1px, $color-main);
-      font-size: $font-lg;
-      margin: 0;
-      padding: 10px 0 5px 0;
-      color: #000;
-    }
-
-    article{
-      border-bottom: 1px solid $color-base;
-      height: 4rem;
-      overflow: hidden;
-
-      h4 {
-        font-weight: 900;
-        color: #000;
-        font-size: 1rem;
+  &.home {
+    .post {
+      h3 {
+        @include color-line(1px, $color-main);
+        font-size: $font-lg;
         margin: 0;
+        padding: 10px 0 5px 0;
+        color: #000;
+      }
+
+      article{
+        border-bottom: 1px solid $color-base;
+        height: 4rem;
+        overflow: hidden;
+
+        h4 {
+          font-weight: 900;
+          color: #000;
+          font-size: 1rem;
+          margin: 0;
+        }
+      }
+    }
+
+    .map {
+      h3 {
+        @include color-line(1px, $color-main);
+        font-size: $font-lg;
+        margin: 0;
+        padding: 10px 0 5px 0;
+        color: #000;
+      }
+
+      iframe{
+        max-height: 300px;
+      }
+    }
+
+    .information {
+      padding: 20px;
+      padding-top: 10px;
+      background-color: rgba($color-base, .5);
+      border: 1px solid $color-base;
+      box-shadow: 0 1px 0 $color-base;
+      border-radius: $radius;
+
+      h3 {
+        @extend .ribbon;
+        font-size: 14px;
+        max-width: 100px;
       }
     }
   }
 
-  .map {
-    h3 {
-      @include color-line(1px, $color-main);
-      font-size: $font-lg;
-      margin: 0;
-      padding: 10px 0 5px 0;
-      color: #000;
-    }
-
-    iframe{
-      max-height: 300px;
+  &.single,
+  &.page {
+    section {
+      header {
+        h2 {
+          @include color-line(2px, $color-main);
+          font-family: $font-stack-accent;
+          margin: 0;
+          padding: 20px 0;
+          color: #000;
+        }
+      }
     }
   }
 }

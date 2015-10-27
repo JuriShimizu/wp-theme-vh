@@ -93,7 +93,7 @@ a.block {
   .row-condensed > div {
     padding: 0 5px; }
 
-.ribbon, section .information h3 {
+.ribbon, body.home .information h3 {
   display: inline-block;
   width: 100%;
   position: relative;
@@ -101,7 +101,7 @@ a.block {
   padding: 10px;
   background-color: #f39c12;
   color: #fff; }
-  .ribbon:before, section .information h3:before {
+  .ribbon:before, body.home .information h3:before {
     content: '';
     display: block;
     position: absolute;
@@ -112,7 +112,7 @@ a.block {
     border: 5px solid #c87f0a;
     border-left: 5px solid transparent;
     border-bottom: 5px solid transparent; }
-  .ribbon:after, section .information h3:after {
+  .ribbon:after, body.home .information h3:after {
     content: '';
     display: block;
     position: absolute;
@@ -176,73 +176,74 @@ body .hero {
   body .hero .typography {
     padding: 30px 0 210px 0; }
 
-section header h2 {
+body.home .post h3 {
   position: relative;
-  border-bottom: 2px solid #eee;
+  border-bottom: 1px solid #eee;
+  font-size: 1.2rem;
   margin: 0;
-  padding: 20px 0;
+  padding: 10px 0 5px 0;
   color: #000; }
-  section header h2:before {
+  body.home .post h3:before {
     position: absolute;
-    bottom: -2px;
+    bottom: -1px;
     width: 30%;
     content: '';
     display: block;
-    border-bottom: 2px solid #2980b9; }
+    border-bottom: 1px solid #2980b9; }
 
-section .information {
+body.home .post article {
+  border-bottom: 1px solid #eee;
+  height: 4rem;
+  overflow: hidden; }
+  body.home .post article h4 {
+    font-weight: 900;
+    color: #000;
+    font-size: 1rem;
+    margin: 0; }
+
+body.home .map h3 {
+  position: relative;
+  border-bottom: 1px solid #eee;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 10px 0 5px 0;
+  color: #000; }
+  body.home .map h3:before {
+    position: absolute;
+    bottom: -1px;
+    width: 30%;
+    content: '';
+    display: block;
+    border-bottom: 1px solid #2980b9; }
+
+body.home .map iframe {
+  max-height: 300px; }
+
+body.home .information {
   padding: 20px;
   padding-top: 10px;
   background-color: rgba(238, 238, 238, 0.5);
   border: 1px solid #eee;
   box-shadow: 0 1px 0 #eee;
   border-radius: 3px; }
-  section .information h3 {
+  body.home .information h3 {
     font-size: 14px;
     max-width: 100px; }
 
-section .post h3 {
+body.single section header h2, body.page section header h2 {
   position: relative;
-  border-bottom: 1px solid #eee;
-  font-size: 1.2rem;
+  border-bottom: 2px solid #eee;
+  font-family: mplus-1p-regular;
   margin: 0;
-  padding: 10px 0 5px 0;
+  padding: 20px 0;
   color: #000; }
-  section .post h3:before {
+  body.single section header h2:before, body.page section header h2:before {
     position: absolute;
-    bottom: -1px;
+    bottom: -2px;
     width: 30%;
     content: '';
     display: block;
-    border-bottom: 1px solid #2980b9; }
-
-section .post article {
-  border-bottom: 1px solid #eee;
-  height: 4rem;
-  overflow: hidden; }
-  section .post article h4 {
-    font-weight: 900;
-    color: #000;
-    font-size: 1rem;
-    margin: 0; }
-
-section .map h3 {
-  position: relative;
-  border-bottom: 1px solid #eee;
-  font-size: 1.2rem;
-  margin: 0;
-  padding: 10px 0 5px 0;
-  color: #000; }
-  section .map h3:before {
-    position: absolute;
-    bottom: -1px;
-    width: 30%;
-    content: '';
-    display: block;
-    border-bottom: 1px solid #2980b9; }
-
-section .map iframe {
-  max-height: 300px; }
+    border-bottom: 2px solid #2980b9; }
 
 footer {
   font-size: 0.8rem; }
