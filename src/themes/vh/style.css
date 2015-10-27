@@ -254,6 +254,30 @@ main.site-body {
 .page .body {
   font-size: 1.2rem;
   color: #000; }
+  .single .body h1, .single .body h2, .single .body h3, .single .body h4, .single .body h5, .single .body h6,
+  .page .body h1,
+  .page .body h2,
+  .page .body h3,
+  .page .body h4,
+  .page .body h5,
+  .page .body h6 {
+    position: relative;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    margin-top: 1em; }
+    .single .body h1:before, .single .body h2:before, .single .body h3:before, .single .body h4:before, .single .body h5:before, .single .body h6:before,
+    .page .body h1:before,
+    .page .body h2:before,
+    .page .body h3:before,
+    .page .body h4:before,
+    .page .body h5:before,
+    .page .body h6:before {
+      position: absolute;
+      bottom: -1px;
+      width: 30%;
+      content: '';
+      display: block;
+      border-bottom: 1px solid #2980b9; }
 
 footer {
   font-size: 0.8rem; }
