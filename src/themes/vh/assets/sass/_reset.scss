@@ -16,6 +16,7 @@ body {
 
 a {
   color: $color-main;
+  transition-duration: .2s;
 }
 
 a:hover,
@@ -25,11 +26,11 @@ a:active {
   color: $color-accent;
 }
 
-h1 { font-size: 2.1rem; }
-h2 { font-size: 1.9rem; }
-h3 { font-size: 1.7rem; }
-h4 { font-size: 1.5rem; }
-h5 { font-size: 1.3rem; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.7rem; }
+h3 { font-size: 1.45rem; }
+h4 { font-size: 1.3rem; }
+h5 { font-size: 1.2rem; }
 h6 { font-size: 1.1rem; }
 
 

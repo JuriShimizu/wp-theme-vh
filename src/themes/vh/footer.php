@@ -4,11 +4,11 @@
     <div class="container-fluid">
         <div class="links">
             <?php $page = get_post(get_page_by_path('introduction')); ?>
-            <a href="/<?php echo $page->post_name ?>"><?php echo $page->post_title ?></a>
+            <a href="/<?php echo get_permalink($page); ?>"><?php echo $page->post_title ?></a>
             <?php $page = get_post(get_page_by_path('about')); ?>
-            <a href="/<?php echo $page->post_name ?>"><?php echo $page->post_title ?></a>
+            <a href="/<?php echo get_permalink($page); ?>"><?php echo $page->post_title ?></a>
             <?php $page = get_post(get_page_by_path('access')); ?>
-            <a href="/<?php echo $page->post_name ?>"><?php echo $page->post_title ?></a>
+            <a href="/<?php echo get_permalink($page); ?>"><?php echo $page->post_title ?></a>
         </div>
     </div>
 

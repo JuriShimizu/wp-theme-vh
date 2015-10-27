@@ -1,5 +1,9 @@
 @import '_import';
 
+.container-sm {
+  max-width: 800px;
+}
+
 .divider-lg { padding: 10px; }
 .divider { padding: 5px; }
 .divider-sm { padding: 3px; }
@@ -35,7 +39,7 @@ a.block {
   padding: 10px;
   background-color: lighten($color-main, 10%);
   color: #fff;
-  box-shadow: $box-shadow;
+  box-shadow: 1px 2px 3px darken($color-base, 20%);
 
   &:before {
     content: '';

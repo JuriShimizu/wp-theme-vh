@@ -14,12 +14,12 @@
 
             <div class="col-sm-6">
                 <?php $page = get_post(get_page_by_path('information')); ?>
-                <article class="information">
+                <section class="information">
                     <h3><?php echo $page->post_title; ?></h3>
                     <div class="divider-lg"></div>
                     <div class="pre"><?php echo $page->post_content; ?></div>
-                </article>
-                <div class="divider"></div>
+                </section>
+                <div class="visible-xs divider-lg"></div>
             </div>
 
             <div class="col-sm-6">
@@ -27,17 +27,22 @@
                 <section class="post">
                     <h3>院長ブログ</h3>
 
-                    <?php while ( have_posts() ) : the_post(); ?>
-
-                    <a href="<?php echo esc_url(get_permalink()) ?>" class="block">
-                        <article>
+                    <?php for ($i = 0; (have_posts() && $i < 3); $i++) : the_post(); ?>
+                    <article>
+                        <a href="<?php echo esc_url(get_permalink()) ?>" class="block">
                             <h4><?php the_title(); ?> <small><?php the_date(); ?></small></h4>
-                            <?php the_content(sprintf(the_title('', '', false ))); ?>
-                        </article>
-                    </a>
+                            <div><?php echo strip_tags(get_the_content()); ?></div>
+                        </a>
+                    </article>
+                    <?php endfor; ?>
+                </section>
 
-                    <?php endwhile; ?>
+                <div class="divider-lg"></div>
 
+                <section class="map">
+                    <?php $page = get_post(get_page_by_path('access')); ?>
+                    <h3><?php echo $page->post_title; ?></h3>
+                    <?php echo $page->post_content; ?>
                 </section>
 
             </div>

@@ -24,7 +24,8 @@ body {
   border-bottom: 10px solid #2980b9; }
 
 a {
-  color: #2980b9; }
+  color: #2980b9;
+  transition-duration: .2s; }
 
 a:hover,
 a:focus,
@@ -33,22 +34,25 @@ a:active {
   color: #e67e22; }
 
 h1 {
-  font-size: 2.1rem; }
+  font-size: 2rem; }
 
 h2 {
-  font-size: 1.9rem; }
-
-h3 {
   font-size: 1.7rem; }
 
+h3 {
+  font-size: 1.45rem; }
+
 h4 {
-  font-size: 1.5rem; }
+  font-size: 1.3rem; }
 
 h5 {
-  font-size: 1.3rem; }
+  font-size: 1.2rem; }
 
 h6 {
   font-size: 1.1rem; }
+
+.container-sm {
+  max-width: 800px; }
 
 .divider-lg {
   padding: 10px; }
@@ -75,7 +79,7 @@ a.block {
   .row-condensed > div {
     padding: 0 5px; }
 
-.ribbon, .information h3 {
+.ribbon, section .information h3 {
   display: inline-block;
   width: 100%;
   max-width: 200px;
@@ -84,8 +88,8 @@ a.block {
   padding: 10px;
   background-color: #409ad5;
   color: #fff;
-  box-shadow: 0 2px 3px #bbbbbb; }
-  .ribbon:before, .information h3:before {
+  box-shadow: 1px 2px 3px #bbbbbb; }
+  .ribbon:before, section .information h3:before {
     content: '';
     display: block;
     position: absolute;
@@ -98,8 +102,7 @@ a.block {
     border-bottom: 5px solid transparent; }
 
 header.site-header h1 {
-  font-family: mplus-1p-regular;
-  font-weight: 900; }
+  font-family: mplus-1p-regular; }
 
 header.site-header h1, header.site-header a, header.site-header p {
   color: #000; }
@@ -125,48 +128,62 @@ header.site-header nav .links {
     background-image: url(./images/icon/parrot_128px.png); }
   header.site-header nav .links .link h3 {
     font-size: 1rem;
-    font-weight: 900;
     margin: 0; }
 
 main.site-body {
   min-height: 700px; }
 
-.hero {
+body .hero h2 {
+  font-family: mplus-1p-regular; }
+
+body.home .hero {
   background-color: rgba(41, 128, 185, 0.2);
   /*background-image: url(./images/bg.jpg);*/
   /*background-size: cover;*/
   /*background-position: center;*/ }
-  .hero h2 {
-    font-family: mplus-1p-regular;
+  body.home .hero .typography {
+    padding: 100px 0; }
+  body.home .hero h2 {
     color: #000; }
 
-body.home .typography {
-  padding: 100px 0; }
+body.single .hero, body.page .hero {
+  background-color: #2980b9; }
+  body.single .hero .typography, body.page .hero .typography {
+    padding: 30px 0; }
+    body.single .hero .typography h2, body.page .hero .typography h2 {
+      color: #fff; }
 
-body.single .typography {
-  padding: 30px 0; }
-
-.information {
+section .information {
   padding: 20px;
   padding-top: 10px;
   background-color: rgba(238, 238, 238, 0.5);
-  border-bottom: 3px solid #eee; }
-  .information h3 {
-    font-size: 1rem;
-    font-weight: 900; }
+  border-bottom: 3px solid #eee;
+  border-radius: 3px; }
+  section .information h3 {
+    font-size: 1rem; }
 
-.post h3 {
+section .post {
+  border-bottom: 1px solid #eee; }
+  section .post h3 {
+    margin: 0;
+    padding: 10px 0;
+    color: #000; }
+  section .post article {
+    height: 4rem;
+    overflow: hidden; }
+    section .post article h4 {
+      color: #000;
+      font-weight: 900;
+      font-size: 1rem;
+      margin: 0; }
+
+section .map h3 {
   margin: 0;
-  font-size: 1.2rem;
-  color: #000;
-  font-weight: 900; }
+  padding: 10px 0;
+  color: #000; }
 
-.post article {
-  padding: 10px 0; }
-  .post article h4 {
-    color: #000;
-    font-size: 1rem;
-    margin: 0; }
+section .map iframe {
+  max-height: 300px; }
 
 footer {
   font-size: 0.8rem; }
@@ -178,4 +195,9 @@ footer {
       text-decoration: underline;
       margin: 0 10px; }
   footer .copy {
-    padding: 30px 0; }
+    padding: 30px 0;
+    font-family: mplus-1p-regular; }
+
+@media (max-width: 767px) {
+  html {
+    font-size: 12px; } }

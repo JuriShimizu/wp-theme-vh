@@ -32,7 +32,7 @@
                                     <?php foreach (['introduction', 'about', 'examination', 'pricing', 'trimming', 'hotel'] as $el): ?>
                                     <div class="col-sm-2 col-xs-4">
                                         <?php $page = get_post(get_page_by_path($el)); ?>
-                                        <a href="/<?php echo $page->post_name ?>" class="text-center block">
+                                        <a href="/<?php echo get_permalink($page); ?>" class="text-center block">
                                             <div class="link <?php echo $el; ?>">
                                                 <div class="icon"></div>
                                                 <div class="divider-sm"></div>

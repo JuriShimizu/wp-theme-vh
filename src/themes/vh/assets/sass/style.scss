@@ -18,7 +18,6 @@ Text Domain: VH
 header.site-header {
   h1 {
     font-family: $font-stack-accent;
-    font-weight: 900;
   }
 
   h1, a, p {
@@ -47,7 +46,6 @@ header.site-header {
 
         h3 {
           font-size: 1rem;
-          font-weight: 900;
           margin: 0;
         }
       }
@@ -59,61 +57,92 @@ main.site-body {
   min-height: 700px;
 }
 
-.hero {
-  background-color: rgba($color-main, .2);
-  /*background-image: url(./images/bg.jpg);*/
-  /*background-size: cover;*/
-  /*background-position: center;*/
-
-  h2 {
-    font-family: $font-stack-accent;
-    color: #000;
-  }
-}
-
 body {
+  .hero {
+    h2 {
+      font-family: $font-stack-accent;
+    }
+  }
+
   &.home {
-    .typography {
-      padding: 100px 0;
+    .hero {
+      background-color: rgba($color-main, .2);
+      /*background-image: url(./images/bg.jpg);*/
+      /*background-size: cover;*/
+      /*background-position: center;*/
+
+
+      .typography {
+        padding: 100px 0;
+      }
+
+      h2 {
+        color: #000;
+      }
     }
   }
 
-  &.single {
-    .typography {
-      padding: 30px 0;
+  &.single,
+  &.page {
+    .hero {
+      background-color: $color-main;
+
+      .typography {
+        padding: 30px 0;
+
+        h2 {
+          color: #fff;
+        }
+      }
     }
   }
 }
 
-.information {
-  padding: 20px;
-  padding-top: 10px;
-  background-color: rgba($color-base, .5);
-  border-bottom: 3px solid $color-base;
+section {
+  .information {
+    padding: 20px;
+    padding-top: 10px;
+    background-color: rgba($color-base, .5);
+    border-bottom: 3px solid $color-base;
+    border-radius: $radius;
 
-  h3 {
-    font-size: 1rem;
-    font-weight: 900;
-
-    @extend .ribbon;
-  }
-}
-
-.post {
-  h3 {
-    margin: 0;
-    font-size: $font-lg;
-    color: #000;
-    font-weight: 900;
-  }
-
-  article {
-    padding: 10px 0;
-
-    h4 {
-      color: #000;
+    h3 {
       font-size: 1rem;
+      @extend .ribbon;
+    }
+  }
+
+  .post {
+    border-bottom: 1px solid $color-base;
+
+    h3 {
       margin: 0;
+      padding: 10px 0;
+      color: #000;
+    }
+
+    article{
+      height: 4rem;
+      overflow: hidden;
+
+      h4 {
+        color: #000;
+        font-weight: 900;
+        font-size: 1rem;
+        margin: 0;
+      }
+    }
+  }
+
+  .map {
+    h3 {
+      margin: 0;
+      padding: 10px 0;
+      color: #000;
+    }
+
+    iframe{
+      max-height: 300px;
     }
   }
 }
@@ -134,10 +163,13 @@ footer {
 
   .copy {
     padding: 30px 0;
+    font-family: $font-stack-accent;
   }
 }
 
 @media (max-width:767px) {
+  html {
+    font-size: 12px;
+  }
 }
-
 
