@@ -74,7 +74,6 @@ body {
       font-family: $font-stack-accent;
       letter-spacing: 5px;
       text-shadow: 0 1px 1px #000;
-      font-weight: 900;
     }
 
     background-size: cover;
@@ -136,6 +135,7 @@ section {
       overflow: hidden;
 
       h4 {
+        font-weight: 900;
         color: #000;
         font-size: 1rem;
         margin: 0;
