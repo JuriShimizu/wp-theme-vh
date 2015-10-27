@@ -19,7 +19,6 @@ Text Domain: VH
   font-family: mplus-1p-regular;
   src: url("/wp-content/themes/vh/fonts/mplus-1p-regular.ttf") format("truetype"); }
 
-/* Reset */
 html {
   font-size: 14px; }
 
@@ -58,6 +57,9 @@ h5 {
 
 h6 {
   font-size: 1.1rem; }
+
+hr {
+  margin: 0; }
 
 @font-face {
   font-family: mplus-1p-regular;
@@ -235,7 +237,6 @@ section .map iframe {
 footer {
   font-size: 0.8rem; }
   footer .links {
-    border-top: 1px solid #eee;
     padding: 20px 0; }
     footer .links a {
       color: #888888;

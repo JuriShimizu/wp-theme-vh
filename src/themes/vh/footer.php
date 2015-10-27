@@ -1,6 +1,10 @@
 
 <footer class="site-footer">
     <div class="container-fluid">
+        <hr>
+    </div>
+
+    <div class="hidden-xs container-fluid">
         <div class="links">
             <?php foreach (['introduction', 'about', 'examination', 'pricing', 'trimming', 'hotel'] as $el): ?>
             <?php $page = get_post(get_page_by_path($el)); ?>
