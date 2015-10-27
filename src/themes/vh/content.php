@@ -29,7 +29,7 @@
 
                     <?php for ($i = 0; (have_posts() && $i < 3); $i++) : the_post(); ?>
                     <article>
-                        <a href="<?php echo esc_url(get_permalink()) ?>" class="block">
+                        <a href="/archives/<?php echo get_the_ID(); ?>" class="block">
                             <h4><?php the_title(); ?> <small><?php the_date(); ?></small></h4>
                             <div><?php echo strip_tags(get_the_content()); ?></div>
                         </a>
