@@ -6,10 +6,10 @@
         <article>
             <header>
                 <h2>
-                    <?php the_title(); ?>
                     <?php if (is_single()): ?>
                     <small><?php echo the_date(); ?></small>
                     <?php endif; ?>
+                    <?php the_title(); ?>
                 </h2>
             </header>
 

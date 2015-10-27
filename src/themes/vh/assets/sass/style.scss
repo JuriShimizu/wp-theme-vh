@@ -149,6 +149,10 @@ body {
           margin: 0;
           padding: 20px 0;
           color: #000;
+
+          small {
+            display: block;
+          }
         }
       }
     }
@@ -177,10 +181,6 @@ footer {
 @media (max-width:767px) {
   html {
     font-size: 12px;
-  }
-
-  small {
-    display: block;
   }
 }
 
