@@ -1,13 +1,3 @@
-<section class="hero">
-    <div class="lay">
-        <div class="container">
-            <h2>大切な動物たちを<br>元気にしてあげたい</h2>
-        </div>
-    </div>
-</section>
-
-<div class="divider-lg"></div>
-
 <section>
     <div class="container">
         <div class="row row-condensed">

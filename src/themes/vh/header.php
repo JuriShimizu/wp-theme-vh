@@ -12,26 +12,46 @@
 
     <body <?php body_class(); ?>>
 
-        <header class="site-header">
-            <div class="container-fluid">
-                <nav>
-                    <div class="row">
+        <section class="hero">
+            <div class="lay">
 
-                        <div class="col-sm-6">
-                            <h1><a href="/" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                            <p><?php echo get_bloginfo( 'description', 'display' ); ?></p>
-                        </div>
+                <div class="container-fluid">
+                    <header class="site-header">
 
-                        <div class="col-sm-6">
-                            <div class="text-right links">
-                                <?php $page = get_post(get_page_by_path('introduction')); ?>
-                                <a href="/<?php echo $page->post_name ?>"><?php echo $page->post_title ?></a>
-                                <?php $page = get_post(get_page_by_path('access')); ?>
-                                <a href="/<?php echo $page->post_name ?>"><?php echo $page->post_title ?></a>
+                        <nav>
+                            <div class="row">
+
+                                <div class="col-sm-6">
+                                    <h1><a href="/" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                                    <p><?php echo get_bloginfo( 'description', 'display' ); ?></p>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="text-right links">
+                                        <?php $page = get_post(get_page_by_path('introduction')); ?>
+                                        <a href="/<?php echo $page->post_name ?>"><?php echo $page->post_title ?></a>
+                                        <?php $page = get_post(get_page_by_path('access')); ?>
+                                        <a href="/<?php echo $page->post_name ?>"><?php echo $page->post_title ?></a>
+                                    </div>
+                                </div>
+
                             </div>
-                        </div>
+                        </nav>
+                    </header>
+                </div>
 
+                <div class="typography">
+                    <div class="container">
+                        <?php if (is_single()): ?>
+                        <?php the_title('<h2>', '</h2>'); ?>
+                        <?php else: ?>
+                        <h2>大切な動物たちを<br>元気にしてあげたい</h2>
+                        <?php endif; ?>
                     </div>
-                </nav>
+                </div>
             </div>
-        </header>
+        </section>
+
+        <div class="divider-lg"></div>
+
+

@@ -19,7 +19,6 @@ body {
   font-size: inherit;
   font-family: "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   -webkit-font-smoothing: antialiased;
-  background-color: #eee;
   color: #333; }
 
 a {
@@ -75,16 +74,16 @@ a.block {
     padding: 0 5px; }
 
 header.site-header {
-  background-color: #fff; }
-  header.site-header h1, header.site-header a {
-    color: #333; }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+  header.site-header h1, header.site-header a, header.site-header p {
+    color: #fff; }
   header.site-header .links {
     padding: 25px 0; }
     header.site-header .links a {
       padding: 5px 10px;
       margin: 0 10px;
       display: inline-block;
-      border-bottom: 1px solid #333; }
+      border-bottom: 1px solid #fff; }
 
 main.site-body {
   min-height: 500px; }
@@ -94,34 +93,34 @@ section.hero {
   background-size: cover;
   background-position: center; }
   section.hero .lay {
-    background-color: rgba(0, 0, 0, 0.7); }
+    background-color: rgba(0, 0, 0, 0.5); }
     section.hero .lay h2 {
       color: #fff; }
 
-body.home section.hero .lay {
-  padding: 60px; }
+body.home .typography {
+  padding: 80px 0; }
 
-body.single section.hero .lay {
-  padding: 30px; }
+body.single .typography {
+  padding: 30px 0; }
 
 article {
   padding: 20px; }
   article h3 {
     margin: 0; }
-  article.information {
-    background-color: #fff; }
   article.sm {
-    padding: 40px 0;
-    background-color: #fff; }
+    padding: 40px 0; }
     article.sm h3 {
       font-size: 1.2rem;
       color: #000; }
 
 footer {
-  padding: 50px 0; }
-
-@media (max-width: 767px) {
-  html {
-    font-size: 12px; }
-  header.site-header .links {
-    text-align: center; } }
+  font-size: 0.8rem; }
+  footer .links {
+    border-top: 1px solid #eee;
+    padding: 20px 0; }
+    footer .links a {
+      color: #888888;
+      text-decoration: underline;
+      margin: 0 10px; }
+  footer .copy {
+    padding: 30px 0; }

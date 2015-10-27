@@ -9,8 +9,7 @@ body {
   font-size: inherit;
   font-family: $font-stack;
   -webkit-font-smoothing: antialiased;
-  background-color: $color-base;
-  color: $color-base-darken;
+  color: #333;
 }
 
 a {
@@ -21,7 +20,7 @@ a:hover,
 a:focus,
 a:active {
   text-decoration: none;
-  color: $color-main-darken1;
+  color: darken($color-main, 10%);
 }
 
 h1 { font-size: 2.1rem; }
