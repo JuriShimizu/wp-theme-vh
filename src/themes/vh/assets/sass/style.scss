@@ -122,13 +122,12 @@ main.site-body {
   .information {
     padding: 20px;
     padding-top: 10px;
-    background-color: rgba($color-base, .5);
-    border: 1px solid $color-base;
-    box-shadow: 0 1px 0 $color-base;
-    border-radius: $radius;
+    border: 1px solid darken($color-base, 5%);
+    outline: 3px solid rgba($color-base, .5);
 
     h3 {
       @extend .ribbon;
+      margin: 0 -30px;
       font-size: 14px;
       max-width: 100px;
     }

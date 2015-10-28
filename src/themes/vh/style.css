@@ -97,7 +97,6 @@ a.block {
   display: inline-block;
   width: 100%;
   position: relative;
-  margin: 0 -30px;
   padding: 10px;
   background-color: #f39c12;
   color: #fff; }
@@ -221,11 +220,10 @@ main.site-body {
 .home .information {
   padding: 20px;
   padding-top: 10px;
-  background-color: rgba(238, 238, 238, 0.5);
-  border: 1px solid #eee;
-  box-shadow: 0 1px 0 #eee;
-  border-radius: 3px; }
+  border: 1px solid #e1e1e1;
+  outline: 3px solid rgba(238, 238, 238, 0.5); }
   .home .information h3 {
+    margin: 0 -30px;
     font-size: 14px;
     max-width: 100px; }
 
