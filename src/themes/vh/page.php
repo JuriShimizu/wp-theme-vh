@@ -1,3 +1,6 @@
+<?php get_header(); ?>
+
+<?php the_post(); ?>
 
 <div class="divider-lg"></div>
 
@@ -6,9 +9,6 @@
         <article>
             <header>
                 <h2>
-                    <?php if (is_single()): ?>
-                    <small><?php echo the_date(); ?></small>
-                    <?php endif; ?>
                     <?php the_title(); ?>
                 </h2>
             </header>
@@ -21,3 +21,5 @@
         </article>
     </div>
 </section>
+
+<?php get_footer(); ?>

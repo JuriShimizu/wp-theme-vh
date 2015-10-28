@@ -1,3 +1,6 @@
+</main>
+
+<div class="divider-lg"></div>
 
 <footer class="site-footer">
     <div class="container-fluid">

@@ -162,7 +162,7 @@ header.site-header .links {
       margin: 0; }
 
 main.site-body {
-  min-height: 700px; }
+  padding-bottom: 50px; }
 
 .hero {
   background-size: cover;
