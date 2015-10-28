@@ -82,54 +82,61 @@ main.site-body {
 }
 
 .home {
-  .post {
-    h3 {
-      @include color-line(1px, $color-main);
-      font-size: $font-lg;
-      margin: 0;
-      padding: 10px 0 5px 0;
-      color: #000;
-    }
+  section {
+    &.business,
+    &.information {
+      @extend .board;
+      padding-top: 10px;
 
-    article{
-      border-bottom: 1px solid $color-base;
-      height: 4rem;
-      overflow: hidden;
-
-      h4 {
-        font-weight: 900;
-        color: #000;
-        font-size: 1rem;
-        margin: 0;
+      h3 {
+        @include ribbon($color-accent);
+        margin: 0 -30px;
+        font-size: 14px;
+        max-width: 100px;
       }
     }
-  }
 
-  .map {
-    h3 {
-      @include color-line(1px, $color-main);
-      font-size: $font-lg;
-      margin: 0;
-      padding: 10px 0 5px 0;
-      color: #000;
+    &.business{
+      h3 {
+        @include ribbon($color-main);
+      }
     }
 
-    iframe{
-      max-height: 300px;
+    &.post {
+      h3 {
+        @include color-line(1px, $color-main);
+        font-size: $font-lg;
+        margin: 0;
+        padding: 10px 0 5px 0;
+        color: #000;
+      }
+
+      article{
+        border-bottom: 1px solid $color-base;
+        height: 4rem;
+        overflow: hidden;
+
+        h4 {
+          font-weight: 900;
+          color: #000;
+          font-size: 1rem;
+          margin: 0;
+        }
+      }
     }
-  }
 
-  .information {
-    padding: 20px;
-    padding-top: 10px;
-    border: 1px solid darken($color-base, 5%);
-    outline: 3px solid rgba($color-base, .5);
+    &.map {
+      h3 {
+        @include color-line(1px, $color-main);
+        font-size: $font-lg;
+        margin: 0;
+        padding: 10px 0 5px 0;
+        color: #000;
+      }
 
-    h3 {
-      @extend .ribbon;
-      margin: 0 -30px;
-      font-size: 14px;
-      max-width: 100px;
+      iframe{
+        max-height: 300px;
+      }
     }
   }
 }

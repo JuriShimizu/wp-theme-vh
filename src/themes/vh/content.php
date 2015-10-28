@@ -13,6 +13,17 @@
         <div class="row">
 
             <div class="col-sm-6">
+                <?php $page = get_post(get_page_by_path('business')); ?>
+                <section class="business">
+                    <h3><?php echo $page->post_title; ?></h3>
+                    <div class="divider"></div>
+                    <div class="body">
+                        <?php echo $page->post_content; ?>
+                    </div>
+                </section>
+
+                <div class="divider-lg"></div>
+
                 <?php $page = get_post(get_page_by_path('information')); ?>
                 <section class="information">
                     <h3><?php echo $page->post_title; ?></h3>

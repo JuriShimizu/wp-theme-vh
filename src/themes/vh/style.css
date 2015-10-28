@@ -61,6 +61,9 @@ h5 {
 h6 {
   font-size: 1.1rem; }
 
+table.table {
+  margin-bottom: 0; }
+
 hr {
   margin: 0; }
 
@@ -96,34 +99,10 @@ a.block {
   .row-condensed > div {
     padding: 0 5px; }
 
-.ribbon, .home .information h3 {
-  display: inline-block;
-  width: 100%;
-  position: relative;
-  padding: 10px;
-  background-color: #f39c12;
-  color: #fff; }
-  .ribbon:before, .home .information h3:before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    width: 10px;
-    height: 10px;
-    border: 5px solid #c87f0a;
-    border-left: 5px solid transparent;
-    border-bottom: 5px solid transparent; }
-  .ribbon:after, .home .information h3:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    right: -30px;
-    height: 10px;
-    border: 25px solid #f39c12;
-    border-right: 5px solid transparent;
-    border-bottom: 10px solid transparent; }
+.board, .home section.business, .home section.information {
+  padding: 20px;
+  border: 1px solid #e1e1e1;
+  outline: 3px solid rgba(238, 238, 238, 0.5); }
 
 header.site-header h1 {
   font-family: mplus-1p-regular, sans-serif; }
@@ -177,14 +156,77 @@ main.site-body {
   .hero .typography {
     padding: 30px 0 210px 0; }
 
-.home .post h3 {
+.home section.business, .home section.information {
+  padding-top: 10px; }
+  .home section.business h3, .home section.information h3 {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    padding: 10px;
+    background-color: #f39c12;
+    color: #fff;
+    margin: 0 -30px;
+    font-size: 14px;
+    max-width: 100px; }
+    .home section.business h3:before, .home section.information h3:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 10px;
+      height: 10px;
+      border: 5px solid #c87f0a;
+      border-left: 5px solid transparent;
+      border-bottom: 5px solid transparent; }
+    .home section.business h3:after, .home section.information h3:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -30px;
+      height: 10px;
+      border: 25px solid #f39c12;
+      border-right: 5px solid transparent;
+      border-bottom: 10px solid transparent; }
+
+.home section.business h3 {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  padding: 10px;
+  background-color: #2980b9;
+  color: #fff; }
+  .home section.business h3:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 10px;
+    height: 10px;
+    border: 5px solid #20638f;
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid transparent; }
+  .home section.business h3:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -30px;
+    height: 10px;
+    border: 25px solid #2980b9;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid transparent; }
+
+.home section.post h3 {
   position: relative;
   border-bottom: 1px solid #eee;
   font-size: 1.2rem;
   margin: 0;
   padding: 10px 0 5px 0;
   color: #000; }
-  .home .post h3:before {
+  .home section.post h3:before {
     position: absolute;
     bottom: -1px;
     width: 30%;
@@ -192,24 +234,24 @@ main.site-body {
     display: block;
     border-bottom: 1px solid #2980b9; }
 
-.home .post article {
+.home section.post article {
   border-bottom: 1px solid #eee;
   height: 4rem;
   overflow: hidden; }
-  .home .post article h4 {
+  .home section.post article h4 {
     font-weight: 900;
     color: #000;
     font-size: 1rem;
     margin: 0; }
 
-.home .map h3 {
+.home section.map h3 {
   position: relative;
   border-bottom: 1px solid #eee;
   font-size: 1.2rem;
   margin: 0;
   padding: 10px 0 5px 0;
   color: #000; }
-  .home .map h3:before {
+  .home section.map h3:before {
     position: absolute;
     bottom: -1px;
     width: 30%;
@@ -217,18 +259,8 @@ main.site-body {
     display: block;
     border-bottom: 1px solid #2980b9; }
 
-.home .map iframe {
+.home section.map iframe {
   max-height: 300px; }
-
-.home .information {
-  padding: 20px;
-  padding-top: 10px;
-  border: 1px solid #e1e1e1;
-  outline: 3px solid rgba(238, 238, 238, 0.5); }
-  .home .information h3 {
-    margin: 0 -30px;
-    font-size: 14px;
-    max-width: 100px; }
 
 .single header.site-header,
 .page header.site-header {

@@ -30,12 +30,12 @@ a.block {
   }
 }
 
-.ribbon {
+@mixin ribbon($color) {
   display: inline-block;
   width: 100%;
   position: relative;
   padding: 10px;
-  background-color: lighten($color-accent, 0%);
+  background-color: $color;
   color: #fff;
 
   &:before {
@@ -46,7 +46,7 @@ a.block {
     bottom: -10px;
     width: 10px;
     height: 10px;
-    border: 5px solid darken($color-accent, 10%);
+    border: 5px solid darken($color, 10%);
     border-left: 5px solid transparent;
     border-bottom: 5px solid transparent;
   }
@@ -58,22 +58,28 @@ a.block {
     top: 0;
     right: -30px;
     height: 10px;
-    border: 25px solid lighten($color-accent, 0%);
+    border: 25px solid lighten($color, 0%);
     border-right: 5px solid transparent;
     border-bottom: 10px solid transparent;
   }
 }
 
-@mixin color-line($width, $color) {
-      position: relative;
-      border-bottom: $width solid $color-base;
+.board {
+  padding: 20px;
+  border: 1px solid darken($color-base, 5%);
+  outline: 3px solid rgba($color-base, .5);
+}
 
-      &:before {
-        position: absolute;
-        bottom: -$width;
-        width: 30%;
-        content: '';
-        display: block;
-        border-bottom: $width solid $color;
-      }
+@mixin color-line($width, $color) {
+  position: relative;
+  border-bottom: $width solid $color-base;
+
+  &:before {
+    position: absolute;
+    bottom: -$width;
+    width: 30%;
+    content: '';
+    display: block;
+    border-bottom: $width solid $color;
+  }
 }
