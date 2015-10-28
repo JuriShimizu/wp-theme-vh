@@ -83,7 +83,6 @@ main.site-body {
 
 .home {
   section {
-    &.business,
     &.information {
       @extend .board;
       padding-top: 10px;
@@ -97,8 +96,13 @@ main.site-body {
     }
 
     &.business{
+      @extend .board;
+
       h3 {
-        @include ribbon($color-main);
+        @include color-line(1px, $color-main);
+        padding-bottom: 5px;
+        margin: 0;
+        font-size: $font-lg;
       }
     }
 
