@@ -136,16 +136,22 @@ main.site-body {
 
 .single,
 .page {
-  header {
-    h2 {
-      @include color-line(2px, $color-main);
-      font-family: $font-stack-accent;
-      margin: 0;
-      padding: 20px 0;
-      color: #000;
+  header.site-header {
+    border-bottom: 1px solid $color-base;
+  }
 
-      small {
-        display: block;
+  article {
+    header {
+      h2 {
+        @include color-line(2px, $color-main);
+        font-family: $font-stack-accent;
+        margin: 0;
+        padding: 20px 0;
+        color: #000;
+
+        small {
+          display: block;
+        }
       }
     }
   }
@@ -180,10 +186,3 @@ footer {
     font-family: $font-stack-accent;
   }
 }
-
-@media (max-width:767px) {
-  html {
-    font-size: 12px;
-  }
-}
-

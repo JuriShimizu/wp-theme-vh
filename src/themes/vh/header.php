@@ -14,8 +14,8 @@
 
     <body <?php body_class(); ?>>
 
-        <header class="site-header">
-            <div class="container-fluid">
+        <div class="container-fluid">
+            <header class="site-header">
 
                 <nav>
                     <div class="row">
@@ -47,8 +47,8 @@
 
                     </div>
                 </nav>
-            </div>
 
-        </header>
+            </header>
+        </div>
 
         <main class="site-body">

@@ -21,6 +21,9 @@ Text Domain: VH
 
 html {
   font-size: 14px; }
+  @media (max-width: 767px) {
+    html {
+      font-size: 12px; } }
 
 body {
   font-size: inherit;
@@ -227,24 +230,28 @@ main.site-body {
     font-size: 14px;
     max-width: 100px; }
 
-.single header h2,
-.page header h2 {
+.single header.site-header,
+.page header.site-header {
+  border-bottom: 1px solid #eee; }
+
+.single article header h2,
+.page article header h2 {
   position: relative;
   border-bottom: 2px solid #eee;
   font-family: mplus-1p-regular, sans-serif;
   margin: 0;
   padding: 20px 0;
   color: #000; }
-  .single header h2:before,
-  .page header h2:before {
+  .single article header h2:before,
+  .page article header h2:before {
     position: absolute;
     bottom: -2px;
     width: 30%;
     content: '';
     display: block;
     border-bottom: 2px solid #2980b9; }
-  .single header h2 small,
-  .page header h2 small {
+  .single article header h2 small,
+  .page article header h2 small {
     display: block; }
 
 .single .body,
@@ -287,7 +294,3 @@ footer {
   footer .copy {
     padding: 30px 0;
     font-family: mplus-1p-regular, sans-serif; }
-
-@media (max-width: 767px) {
-  html {
-    font-size: 12px; } }
