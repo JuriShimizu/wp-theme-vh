@@ -104,19 +104,24 @@ a.block {
   border: 1px solid #e1e1e1;
   outline: 3px solid rgba(238, 238, 238, 0.5); }
 
+.ghost, header.site-header p a {
+  border: 1px solid #2980b9;
+  padding: 1px 5px;
+  border-radius: 3px; }
+  .ghost:hover, header.site-header p a:hover, .ghost:focus, header.site-header p a:focus, .ghost:active, header.site-header p a:active {
+    background-color: #2980b9;
+    color: #fff; }
+
 header.site-header h1 {
   font-family: mplus-1p-regular, sans-serif; }
+  header.site-header h1 a {
+    color: #000; }
 
-header.site-header h1, header.site-header a, header.site-header p {
+header.site-header p a {
+  display: inline-block; }
+
+header.site-header h1, header.site-header p {
   color: #000; }
-
-header.site-header .important {
-  padding: 25px; }
-  header.site-header .important a {
-    font-size: 1.2rem;
-    display: inline-block;
-    border-bottom: 2px solid #000;
-    padding: 4px 6px; }
 
 nav.menu {
   padding: 10px 0;

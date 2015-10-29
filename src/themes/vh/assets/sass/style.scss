@@ -18,21 +18,21 @@ Text Domain: VH
 header.site-header {
   h1 {
     font-family: $font-stack-accent;
-  }
-
-  h1, a, p {
-    color: #000;
-  }
-
-  .important {
-    padding: 25px;
 
     a {
-      font-size: $font-lg;
-      display: inline-block;
-      border-bottom: 2px solid #000;
-      padding: 4px 6px;
+      color: #000;
     }
+  }
+
+  p {
+    a {
+      @extend .ghost;
+      display: inline-block;
+    }
+  }
+
+  h1, p {
+    color: #000;
   }
 }
 

@@ -18,21 +18,9 @@
             <header class="site-header">
 
                 <nav>
-                    <div class="row">
-
-                        <div class="col-md-6">
-                            <h1><a href="/" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                            <p><?php echo get_bloginfo( 'description', 'display' ); ?></p>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="text-right important">
-                                <?php $page = get_post(get_page_by_path('access')); ?>
-                                <a href="/<?php echo $page->post_name ?>"><?php echo $page->post_title; ?></a>
-                            </div>
-                        </div>
-
-                    </div>
+                    <h1><a href="/" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                    <?php $page = get_post(get_page_by_path('access')); ?>
+                    <p><?php echo get_bloginfo( 'description', 'display' ); ?> <a href="/<?php echo $page->post_name ?>"><?php echo $page->post_title; ?></a></p>
                 </nav>
 
             </header>
