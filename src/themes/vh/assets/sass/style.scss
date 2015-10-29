@@ -24,42 +24,64 @@ header.site-header {
     color: #000;
   }
 
-  .links {
-    padding-top: 10px;
+  .important {
+    padding: 25px;
 
-    @media (max-width:767px) {
-      border-top: 1px solid $color-base;
-    }
-
-    .link {
-      padding: 10px 0;
-
-      @media (max-width:767px) {
-        background-color: rgba($color-base, .5);
-        border-radius: $radius;
-      }
-
-      .icon {
-        min-height: 30px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-      }
-
-      &.about .icon { background-image: url(./images/icon/bird_128px.png); }
-      &.introduction .icon { background-image: url(./images/icon/sheep_128px.png); }
-      &.examination .icon { background-image: url(./images/icon/cat_128px.png); }
-      &.pricing .icon { background-image: url(./images/icon/chicken_128px.png); }
-      &.trimming .icon { background-image: url(./images/icon/dog_128px.png); }
-      &.hotel .icon { background-image: url(./images/icon/parrot_128px.png); }
-
-      h3 {
-        font-size: 1rem;
-        margin: 0;
-      }
+    a {
+      font-size: $font-lg;
+      display: inline-block;
+      border-bottom: 2px solid #000;
+      padding: 4px 6px;
     }
   }
 }
+
+nav.menu {
+  padding: 10px 0;
+  border-bottom: 1px solid $color-base;
+
+  .icon {
+    display: inline-block;
+    margin-bottom: -8px;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .about .icon { background-image: url(./images/icon/bird_128px.png); }
+  .introduction .icon { background-image: url(./images/icon/sheep_128px.png); }
+  .examination .icon { background-image: url(./images/icon/cat_128px.png); }
+  .pricing .icon { background-image: url(./images/icon/chicken_128px.png); }
+  .trimming .icon { background-image: url(./images/icon/dog_128px.png); }
+  .hotel .icon { background-image: url(./images/icon/parrot_128px.png); }
+
+  a {
+    padding: 5px 0 10px 0;
+    border-right: 1px solid $color-base;
+    text-align: center;
+
+    @media (max-width:767px) {
+      text-align: left;
+      padding: 10px 0 15px 0;
+      border: none;
+    }
+
+    &.hotel {
+      border: none;
+    }
+  }
+
+  h3 {
+    display: inline-block;
+    font-size: $font-lg;
+    color: #000;
+    margin: 0;
+  }
+}
+
 
 main.site-body {
   padding-bottom: 50px;

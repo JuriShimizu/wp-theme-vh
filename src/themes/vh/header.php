@@ -25,23 +25,10 @@
                             <p><?php echo get_bloginfo( 'description', 'display' ); ?></p>
                         </div>
 
-                        <div class="col-md-6">
-                            <div class="links">
-                                <div class="row row-condensed">
-                                    <?php foreach (['introduction', 'about', 'examination', 'pricing', 'trimming', 'hotel'] as $el): ?>
-                                    <div class="col-sm-2 col-xs-4">
-                                        <?php $page = get_post(get_page_by_path($el)); ?>
-                                        <a href="/<?php echo $page->post_name ?>" class="text-center block">
-                                            <div class="link <?php echo $el; ?>">
-                                                <div class="icon"></div>
-                                                <div class="divider-sm"></div>
-                                                <h3><?php echo $page->post_title; ?></h3>
-                                            </div>
-                                        </a>
-                                        <div class="divider"></div>
-                                    </div>
-                                    <?php endforeach; ?>
-                                </div>
+                        <div class="col-sm-6">
+                            <div class="text-right important">
+                                <?php $page = get_post(get_page_by_path('access')); ?>
+                                <a href="/<?php echo $page->post_name ?>"><?php echo $page->post_title; ?></a>
                             </div>
                         </div>
 

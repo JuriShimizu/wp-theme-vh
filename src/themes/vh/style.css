@@ -34,14 +34,14 @@ body {
   border-bottom: 10px solid #2980b9; }
 
 a {
-  color: #2980b9;
+  color: #20638f;
   transition-duration: .2s; }
 
 a:hover,
 a:focus,
 a:active {
   text-decoration: none;
-  color: #f39c12; }
+  color: #2980b9; }
 
 h1 {
   font-size: 2rem; }
@@ -110,37 +110,54 @@ header.site-header h1 {
 header.site-header h1, header.site-header a, header.site-header p {
   color: #000; }
 
-header.site-header .links {
-  padding-top: 10px; }
-  @media (max-width: 767px) {
-    header.site-header .links {
-      border-top: 1px solid #eee; } }
-  header.site-header .links .link {
-    padding: 10px 0; }
+header.site-header .important {
+  padding: 25px; }
+  header.site-header .important a {
+    font-size: 1.2rem;
+    display: inline-block;
+    border-bottom: 2px solid #000;
+    padding: 4px 6px; }
+
+nav.menu {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee; }
+  nav.menu .icon {
+    display: inline-block;
+    margin-bottom: -8px;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; }
+  nav.menu .about .icon {
+    background-image: url(./images/icon/bird_128px.png); }
+  nav.menu .introduction .icon {
+    background-image: url(./images/icon/sheep_128px.png); }
+  nav.menu .examination .icon {
+    background-image: url(./images/icon/cat_128px.png); }
+  nav.menu .pricing .icon {
+    background-image: url(./images/icon/chicken_128px.png); }
+  nav.menu .trimming .icon {
+    background-image: url(./images/icon/dog_128px.png); }
+  nav.menu .hotel .icon {
+    background-image: url(./images/icon/parrot_128px.png); }
+  nav.menu a {
+    padding: 5px 0 10px 0;
+    border-right: 1px solid #eee;
+    text-align: center; }
     @media (max-width: 767px) {
-      header.site-header .links .link {
-        background-color: rgba(238, 238, 238, 0.5);
-        border-radius: 3px; } }
-    header.site-header .links .link .icon {
-      min-height: 30px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain; }
-    header.site-header .links .link.about .icon {
-      background-image: url(./images/icon/bird_128px.png); }
-    header.site-header .links .link.introduction .icon {
-      background-image: url(./images/icon/sheep_128px.png); }
-    header.site-header .links .link.examination .icon {
-      background-image: url(./images/icon/cat_128px.png); }
-    header.site-header .links .link.pricing .icon {
-      background-image: url(./images/icon/chicken_128px.png); }
-    header.site-header .links .link.trimming .icon {
-      background-image: url(./images/icon/dog_128px.png); }
-    header.site-header .links .link.hotel .icon {
-      background-image: url(./images/icon/parrot_128px.png); }
-    header.site-header .links .link h3 {
-      font-size: 1rem;
-      margin: 0; }
+      nav.menu a {
+        text-align: left;
+        padding: 10px 0 15px 0;
+        border: none; } }
+    nav.menu a.hotel {
+      border: none; }
+  nav.menu h3 {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #000;
+    margin: 0; }
 
 main.site-body {
   padding-bottom: 50px; }
