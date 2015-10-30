@@ -128,10 +128,11 @@ nav.menu {
   border-bottom: 1px solid #eee; }
   nav.menu .icon {
     display: inline-block;
-    margin-bottom: -8px;
-    margin-right: 5px;
     width: 30px;
     height: 30px;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-bottom: 5px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; }
@@ -148,13 +149,12 @@ nav.menu {
   nav.menu .hotel .icon {
     background-image: url(./images/icon/parrot_128px.png); }
   nav.menu a {
-    padding: 5px 0 10px 0;
+    padding-top: 5px;
     border-right: 1px solid #eee;
     text-align: center; }
     @media (max-width: 767px) {
       nav.menu a {
         text-align: left;
-        padding: 10px 0 15px 0;
         border: none; } }
     nav.menu a.hotel {
       border: none; }
