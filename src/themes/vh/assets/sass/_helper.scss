@@ -83,3 +83,16 @@ a.block {
     border-bottom: $width solid $color;
   }
 }
+
+.ghost {
+  border: 1px solid $color-main;
+  padding: 1px 5px;
+  border-radius: $radius;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-main;
+    color: #fff;
+  }
+}

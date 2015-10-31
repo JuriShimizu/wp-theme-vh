@@ -6,6 +6,8 @@
     </div>
 </section>
 
+<?php get_template_part('nav'); ?>
+
 <div class="divider-lg"></div>
 
 <section>

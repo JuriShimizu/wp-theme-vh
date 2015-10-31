@@ -18,48 +18,70 @@ Text Domain: VH
 header.site-header {
   h1 {
     font-family: $font-stack-accent;
+
+    a {
+      color: #000;
+    }
   }
 
-  h1, a, p {
+  p {
+    a {
+      @extend .ghost;
+      display: inline-block;
+    }
+  }
+
+  h1, p {
     color: #000;
   }
+}
 
-  .links {
-    padding-top: 10px;
+nav.menu {
+  padding: 10px 0;
+  border-bottom: 1px solid $color-base;
+
+  .icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .about .icon { background-image: url(./images/icon/bird_128px.png); }
+  .introduction .icon { background-image: url(./images/icon/sheep_128px.png); }
+  .examination .icon { background-image: url(./images/icon/cat_128px.png); }
+  .pricing .icon { background-image: url(./images/icon/chicken_128px.png); }
+  .trimming .icon { background-image: url(./images/icon/dog_128px.png); }
+  .hotel .icon { background-image: url(./images/icon/parrot_128px.png); }
+
+  a {
+    padding-top: 5px;
+    border-right: 1px solid $color-base;
+    text-align: center;
 
     @media (max-width:767px) {
-      border-top: 1px solid $color-base;
+      text-align: left;
+      border: none;
     }
 
-    .link {
-      padding: 10px 0;
-
-      @media (max-width:767px) {
-        background-color: rgba($color-base, .5);
-        border-radius: $radius;
-      }
-
-      .icon {
-        min-height: 30px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-      }
-
-      &.about .icon { background-image: url(./images/icon/bird_128px.png); }
-      &.introduction .icon { background-image: url(./images/icon/sheep_128px.png); }
-      &.examination .icon { background-image: url(./images/icon/cat_128px.png); }
-      &.pricing .icon { background-image: url(./images/icon/chicken_128px.png); }
-      &.trimming .icon { background-image: url(./images/icon/dog_128px.png); }
-      &.hotel .icon { background-image: url(./images/icon/parrot_128px.png); }
-
-      h3 {
-        font-size: 1rem;
-        margin: 0;
-      }
+    &.hotel {
+      border: none;
     }
   }
+
+  h3 {
+    display: inline-block;
+    font-size: $font-lg;
+    color: #000;
+    margin: 0;
+  }
 }
+
 
 main.site-body {
   padding-bottom: 50px;
