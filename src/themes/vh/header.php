@@ -16,11 +16,10 @@
 
         <div class="container-fluid">
             <header class="site-header">
-
                 <nav>
-                    <h1><a href="/" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                    <a href="/" rel="home" ><span class="icon"></span><h1><?php bloginfo( 'name' ); ?></h1></a>
                     <?php $page = get_post(get_page_by_path('access')); ?>
-                    <p><?php echo get_bloginfo( 'description', 'display' ); ?> <a href="/<?php echo $page->post_name ?>"><?php echo $page->post_title; ?></a></p>
+                    <h3><?php echo get_bloginfo( 'description', 'display' ); ?> </h3><p><a href="/<?php echo $page->post_name ?>"><?php echo $page->post_title; ?></a></p>
                 </nav>
 
             </header>

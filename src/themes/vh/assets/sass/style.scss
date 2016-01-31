@@ -19,6 +19,7 @@ header.site-header {
   h1 {
     font-family: $font-stack-accent;
 
+    display: inline-block;
     a {
       color: #000;
     }
@@ -33,6 +34,18 @@ header.site-header {
 
   h1, p {
     color: #000;
+  }
+  .icon {
+    display: inline-block;
+    width: 90px;
+    height: 50px;
+    vertical-align: bottom;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url(./images/logo.png);
   }
 }
 
@@ -52,12 +65,16 @@ nav.menu {
     background-size: contain;
   }
 
-  .about .icon { background-image: url(./images/icon/bird_128px.png); }
-  .introduction .icon { background-image: url(./images/icon/sheep_128px.png); }
-  .examination .icon { background-image: url(./images/icon/cat_128px.png); }
-  .pricing .icon { background-image: url(./images/icon/chicken_128px.png); }
-  .trimming .icon { background-image: url(./images/icon/dog_128px.png); }
-  .hotel .icon { background-image: url(./images/icon/parrot_128px.png); }
+  .top .icon { 
+    background-image: url(./images/logo.png); 
+    width: 60px;
+    height: 30px;
+  }
+  .medicalpolicy .icon { background-image: url(./images/icon/horse_128px.png); }
+  .medicaltreatment .icon { background-image: url(./images/icon/elephant_128px.png); }
+  .about .icon { background-image: url(./images/icon/cat_128px.png); }
+  .staff .icon { background-image: url(./images/icon/gorilla_128px.png); }
+  .hotel .icon { background-image: url(./images/icon/dog_128px.png); }
 
   a {
     padding-top: 5px;
@@ -112,8 +129,8 @@ main.site-body {
       h3 {
         @include ribbon($color-accent);
         margin: 0 -30px;
-        font-size: 14px;
-        max-width: 100px;
+        max-width: 200px;
+        font-weight: 600;
       }
     }
 
@@ -125,6 +142,7 @@ main.site-body {
         padding-bottom: 5px;
         margin: 0;
         font-size: $font-lg;
+        font-weight: 600;
       }
     }
 
@@ -192,6 +210,9 @@ main.site-body {
   .body {
     font-size: $font-lg;
     color: #000;
+    h2 {
+      color:$color-main
+    }
 
     h1, h2, h3, h4, h5, h6 {
       @include color-line(1px, $color-main);

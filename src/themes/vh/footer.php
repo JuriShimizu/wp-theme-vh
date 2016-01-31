@@ -9,7 +9,7 @@
 
     <div class="hidden-xs container-fluid">
         <div class="links">
-            <?php foreach (['introduction', 'about', 'examination', 'pricing', 'trimming', 'hotel'] as $el): ?>
+            <?php foreach (['medicalpolicy', 'medicaltreatment', 'about', 'staff','hotel'] as $el): ?>
             <?php $page = get_post(get_page_by_path($el)); ?>
             <a href="/<?php echo $page->post_name ?>"><?php echo $page->post_title ?></a>
             <?php endforeach; ?>

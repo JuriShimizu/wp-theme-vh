@@ -56,11 +56,11 @@ a.block {
     display: block;
     position: absolute;
     top: 0;
-    right: -30px;
+    right: -25px;
     height: 10px;
     border: 25px solid lighten($color, 0%);
-    border-right: 5px solid transparent;
-    border-bottom: 10px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 15px solid transparent;
   }
 }
 
